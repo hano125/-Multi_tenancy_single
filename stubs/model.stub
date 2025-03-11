@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+{{ factoryImport }}
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    {{ factory }}
+        protected $guarded = [];
+
+    public function tanent()
+    {
+        return $this->belongsTo(Tanent::class);
+    }
+}
